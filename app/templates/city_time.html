@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>City Time</h1>
+    <form method="get">
+        <select name="city">
+            {% for c in cities %}
+                <option value="{{c}}" {% if c == selected %}selected{% endif %}>{{c}}</option>
+                {%endfor%}
+        </select>
+        <button type="submit">Show Time</button>
+    </form>
+
+    {% if current_time %}
+    <p>Current time in {{selected}}: {{current_time|date:"Y-M-D H:m:s"}}</p>
+    {%endif%}
+    <a href="{% url 'welcome' %}">Back</a>
+</body>
+</html>
