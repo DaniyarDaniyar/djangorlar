@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Counter: <span id="count">0</span></h1>
+
+    <button id="IncBtn">+</button>
+    <button id="resetBtn">Reset</button>
+
+    <a href="{% url 'welcome' %}">Back</a>
+</body>
+<script>
+    let count = 0;
+    const cntSpan = document.getElementById('count');
+    const incBtn = document.getElementById('IncBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    function render(){
+    cntSpan.textContent = count;
+    }
+
+    incBtn.addEventListener('click', () => {
+        count++;
+        render();
+    })
+    resetBtn.addEventListener('click', () => {
+        count = 0;
+        render();
+    })
+</script>
+</html>
