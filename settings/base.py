@@ -4,15 +4,13 @@ import os
 # Project modules
 from settings.conf import * 
 
-
+DEBUG = True
+ALLOWED_HOSTS = []
 # Path
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT_URLCONF = 'settings.urls'
 WSGI_APPLICATION = 'settings.wsgi.application'
 ASGI_APPLICATION = "settings.wsgi.application"
-
-DEBUG = True
-ALLOWED_HOSTS = []
 
 # Applications
 DJANGO_AND_THIRD_PARTY_APPS = [
@@ -22,9 +20,11 @@ DJANGO_AND_THIRD_PARTY_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app.apps.AppConfig',
 ]
-PROJECT_APPS = []
+PROJECT_APPS = [
+    'catalogs',
+    'commerces',
+]
 INSTALLED_APPS = DJANGO_AND_THIRD_PARTY_APPS + PROJECT_APPS
 
 # Middleware | Templates | Validators
