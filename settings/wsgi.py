@@ -1,10 +1,10 @@
-#Python moduled
+# Python modules
 import os
 
-#Django modules
+# Django modules
 from django.core.wsgi import get_wsgi_application
 
-#Project modules
+# Project modules
 from settings.conf import ENV_ID, ENV_POSSIBLE_OPTIONS
 
 

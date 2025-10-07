@@ -1,1 +1,1 @@
-# djangorlar
+# djangorlal
