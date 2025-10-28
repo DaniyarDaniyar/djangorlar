@@ -17,19 +17,7 @@ class InMemoryStore:
 
     def add(self, name: str, score: float = 0.0) -> Record:
         record = Record(id=self._next_id, name=name, score=score)
-<<<<<<< HEAD
-<<<<<<< HEAD
-        record.updated_at = time.time()
-=======
-<<<<<<< HEAD
-        record.created_at = time.time()
-=======
-        record.deleted = False
->>>>>>> 66f2641 (duplicate3:change)
->>>>>>> 3316f2b (duplicate3:change)
-=======
-        record.deleted = False
->>>>>>> 0c707ff (duplicate3:change)
+        record.tags.append(f"created_at:{int(time.time())}")
         self._data[self._next_id] = record
         self._next_id += 1
         return record
