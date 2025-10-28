@@ -11,11 +11,10 @@ from django.db.models import (
     PROTECT,
     CASCADE,
 )
-from django.contrib.auth.models import User
 
 # Project modules
 from apps.abstracts.models import AbstractSoftDeletableModel
-
+from apps.auths.models import CustomUser as User
 
 class Project(AbstractSoftDeletableModel):
     """
