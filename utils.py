@@ -28,7 +28,7 @@ def levenshtein(a: str, b: str) -> int:
     return prev[-1]
 
 def random_password(length=10):
-    chars = "abc123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()"
+    chars = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789!@#$%^&*()"
     return "".join(random.choice(chars) for _ in range(length))
 
 def is_prime(n: int) -> bool:
