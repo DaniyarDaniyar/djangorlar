@@ -20,7 +20,7 @@ class User(Model):
 
 def demo():
     User._db.clear()
-    User("Jojo", 25)
+    User("Gojo", 25)
     User("Bob", 30)
     for u in User.all():
         print(u.id, u.name, u.age)
